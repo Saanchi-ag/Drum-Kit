@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>
+            Drum Kit
+        </title>
+    </head>
+    <style>
+        button{padding:50px; margin:20px; font-size: 30px; color:magenta; text-shadow:2px 2px midnightblue; 
+        border-radius: 20%; border:4px violet solid; box-shadow:3px 2px white;}
+        #W{background-image:url("Images/crash.png") ;}
+        #A{background-image:url("Images/kick.png") ;}
+        #S{background-image:url("Images/snare.png") ;}
+        #D{background-image:url("Images/tom1.png") ;}
+        #J{background-image:url("Images/tom2.png") ;}
+        #K{background-image:url("Images/tom3.png") ;}
+        #L{background-image:url("Images/tom4.png") ;}
+        body{background-image: linear-gradient(blue,yellow,pink);}
+        h1{font-size: 80px; padding:20px; margin-top: 110px ;color:magenta; text-shadow:4px 4px midnightblue; }
+    </style>
+    <body>
+        <center>
+        <h1>
+            Drum Kit
+        </h1>
+        <button id="W">
+            W
+        </button>
+        <button id="A">
+            A
+        </button>
+        <button id="S">
+            S
+        </button>
+        <button id="D">
+            D
+        </button>
+        <button id="J">
+            J
+        </button>
+        <button id="K">
+            K
+        </button>
+        <button id="L">
+            L
+        </button>
+      </center>
+    </body>
+    <script>
+        document.addEventListener("keypress",function(event){
+            console.log(event)
+            makesound(event.key)
+        })
+        function makesound(key){
+            switch(key){
+                case "w":
+                    var boom=new Audio("Sounds/boom.wav")
+                    boom.play();
+                    console.log("w is playing")
+                    break;
+                case "a":
+                    var clap=new Audio("Sounds/clap.wav")
+                    clap.play();
+                    console.log("a is playing")
+                    break;
+                case "s":
+                    var hihat=new Audio("Sounds/hihat.wav")
+                    hihat.play();
+                    console.log("s is playing")
+                    break;
+                case "d":
+                    var kick=new Audio("Sounds/kick.wav")
+                    kick.play();
+                    console.log("d is playing")
+                    break;
+                case "j":
+                    var ride=new Audio("Sounds/ride.wav")
+                    ride.play();
+                    console.log("j is playing")
+                    break;
+                case "k":
+                    var snare=new Audio("Sounds/snare.wav")
+                    snare.play();
+                    console.log("k is playing")
+                    break;
+                case "l":
+                    var tink=new Audio("Sounds/tink.wav")
+                    tink.play();
+                    console.log("l is playing")
+                    break;
+            }
+        }
+    </script>
+</html>
